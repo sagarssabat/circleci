@@ -1,0 +1,37 @@
+@import "_form";
+@import "_reboot";
+@import "_variables";
+
+
+html,
+body {
+    height: 100%;
+}
+
+.sa-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.sa-calc {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.sa-btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-num {
+    background-color: $color-grey;
+    color: $color-white;
+    flex-basis: 25%;
+    min-height: 50px;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #4a4a4a;
+    }
+}
