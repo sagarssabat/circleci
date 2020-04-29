@@ -10,7 +10,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run stylelint"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
