@@ -5,7 +5,16 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp sass",
-    "start": "gulp cssmaps && gulp serve"
+    "start": "gulp cssmaps && gulp serve",
+    "stylelint": "stylelint ./assets/scss/**/*.scss"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./assets/scss/**/*.scss": "npm run stylelint"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +25,10 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglifycss": "^1.1.0",
     "gulp-watch": "^5.0.1",
-    "node-sass": "^4.11.0"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.0",
+    "node-sass": "^4.11.0",
+    "stylelint": "^13.3.3"
   },
   "dependencies": {
     "gulp-dart-sass": "^0.9.1",
